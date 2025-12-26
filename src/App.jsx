@@ -98,16 +98,6 @@ function App() {
         <div className="app">
             <h1>🍽️ Gastos de la comida</h1>
 
-            {/* Agregar amigo */}
-            <div className="add-friend">
-                <input
-                    value={nombre}
-                    onChange={(e) => setNombre(e.target.value)}
-                    placeholder="Nombre del amigo"
-                />
-                <button onClick={agregarAmigo}>Agregar amigo</button>
-            </div>
-
             {/* Amigos */}
             <div className="friends">
                 {amigos.map((amigo) => (
@@ -167,6 +157,16 @@ function App() {
             <h2 className="total-general">
                 Total general: ${totalGeneral().toFixed(2)}
             </h2>
+
+            {/* Agregar amigo */}
+            <div className="add-friend">
+                <input
+                    value={nombre}
+                    onChange={(e) => setNombre(e.target.value)}
+                    placeholder="Nombre del amigo"
+                />
+                <button onClick={agregarAmigo}>Agregar amigo</button>
+            </div>
 
             {/* Botón para calcular deudas */}
             <button className="calcular-deudas" onClick={calcularDeudas}>

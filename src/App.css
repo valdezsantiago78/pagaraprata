@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
   font-family: system-ui, sans-serif;
@@ -18,8 +17,10 @@ body {
 
 .app {
   max-width: 600px;
+  width: 100%;
   margin: 40px auto;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -103,4 +104,28 @@ ul {
   text-align: center;
   font-size: 24px;
   color: #7dffb3;
+}
+
+@media (max-width: 600px) {
+  body {
+    align-items: stretch;
+    padding: 0;
+  }
+  .app {
+    margin: 0;
+    padding: 10px;
+    max-width: 100vw;
+    min-width: 0;
+  }
+  .add-friend, .add-expense {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .card {
+    padding: 10px;
+  }
+  .total-general {
+    font-size: 18px;
+    margin-top: 20px;
+  }
 }
